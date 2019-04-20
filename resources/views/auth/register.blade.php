@@ -26,6 +26,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="nohp" class="col-md-4 col-form-label text-md-right">{{ __('No. HP') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nohp" type="text" class="form-control{{ $errors->has('nohp') ? ' is-invalid' : '' }}" name="nohp" value="{{ old('nohp') }}" required>
+
+                                @if ($errors->has('nohp'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nohp') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -58,6 +72,17 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="level" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="type">
+                                    <option value="user">User</option>
+                                    <option value="launderer">Launderer</option>
+                                </select>
                             </div>
                         </div>
 
