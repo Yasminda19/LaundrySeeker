@@ -16,8 +16,8 @@ Front End dan Design
 
 Back End
 
-1. Usman Abdul Halim ([@zeroload](https://github.com/zeroload)]
-2. Rafie Abdulrahman ([@rathief](https://github.com/Rathief)]
+1. Usman Abdul Halim ([@zeroload](https://github.com/zeroload))
+2. Rafie Abdulrahman ([@rathief](https://github.com/Rathief))
 
 # Our Features!
 | Pelanggan | Pemilik Laundry |
