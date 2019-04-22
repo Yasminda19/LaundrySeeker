@@ -1,7 +1,23 @@
 # Laundry Seeker
+### Proyek ini adalah Proyek Tugas Akhir RPL Lab 2 (Senin) dan Basis Data Lab 1 (Senin)
 
 Laundry Seeker adalah aplikasi yang dapat membantu Pelanggan (Pencari jasa
 laundry) dalam memudahkan mereka mengakses jasa laundry dan mengetahui status pekerjaan laundry mereka.
+
+### Anggota  
+
+Project Manager 
+
+1. Amin Elhan ([@aminelhanipb](https://github.com/aminelhanipb))
+
+Front End dan Design
+
+1. Yasmin Salamah ([@yasminda19](https://github.com/yasminda19))
+
+Back End
+
+1. Usman Abdul Halim ([@zeroload](https://github.com/zeroload))
+2. Rafie Fadlurahman ([@rathief](https://github.com/Rathief))
 
 # Our Features!
 | Pelanggan | Pemilik Laundry |
