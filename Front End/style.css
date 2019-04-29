@@ -14,15 +14,18 @@ body, html {
   background-size: cover;
 }
 
-.bg-sign{
-	/* The image used */
-  background-image: url("http://i63.tinypic.com/2vwhg10.jpg");
+.apaini {
+  padding-left: 200px;
+  padding-top: 100px;
 
-  /* Full height */
-  height: 100%;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+h1{
+text-emphasis: emp;
+
+}
+
+.emailhassent{
+
+  
 }
