@@ -14,4 +14,8 @@ class Launderer extends Model
     protected $fillable = [
         'user_id', 'lokasi'
     ];
+
+    protected $primaryKey = "user_id";
+
+    public $incrementing = False;
 }

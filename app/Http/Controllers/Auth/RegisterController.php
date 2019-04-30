@@ -78,7 +78,7 @@ class RegisterController extends Controller
             Launderer::create([
                 'user_id' => $user->id,
                 'lokasi' => $data['lokasi'],
-            ])
+            ]);
         }
      
         return $user;
