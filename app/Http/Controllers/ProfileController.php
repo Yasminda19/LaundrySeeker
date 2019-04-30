@@ -40,7 +40,7 @@ class ProfileController extends Controller
         
         $user->name = $request['name'];
         $user->email = $request['email'];
-        $user->name = $request['nohp'];
+        $user->nohp = $request['nohp'];
 
         if ($user->type === "launderer")
             $user->launderer->lokasi = $request['lokasi'];

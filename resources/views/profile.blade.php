@@ -32,7 +32,7 @@
                                 </span>
                             @endif
                             @if (Auth::user()->type === "launderer")
-                                <label for="nohp">Lokasi</label>
+                                <label for="lokasi">Lokasi</label>
                                 <input type="text" class="form-control" name="lokasi" value="{{ Auth::user()->launderer->lokasi }}" required>
                             @endif
                         </div>
