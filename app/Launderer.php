@@ -18,4 +18,9 @@ class Launderer extends Model
     protected $primaryKey = "user_id";
 
     public $incrementing = False;
+    
+    public function pakets()
+    {
+        return $this->hasMany('App\Paket', 'launderer_id');
+    }
 }

@@ -22,6 +22,12 @@ Route::get('/aaa', function () {
 Route::get('/profile', 'ProfileController@show');
 Route::put('/profile', 'ProfileController@update');
 
+Route::get('/paket', 'PaketController@list');
+Route::get('/paket/{id}', 'PaketController@show');
+Route::delete('/paket/{id}', 'PaketController@delete');
+Route::post('/paket', 'PaketController@create');
+Route::put('/paket/{id}', 'PaketController@update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

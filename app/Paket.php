@@ -12,7 +12,14 @@ class Paket extends Model
      * @var array
      */
     protected $fillable = [
-        'laundry_id', 'name', 'harga'
+        'launderer_id', 'name', 'harga', 'desc'
     ];
+
+    protected $primaryKey = "paket_id";
+
+    public function launderer()
+    {
+        return $this->belongsTo('App\Launderer', 'launderer_id', 'user_id');
+    }
 }
 

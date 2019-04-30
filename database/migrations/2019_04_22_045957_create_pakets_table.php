@@ -15,8 +15,9 @@ class CreatePaketsTable extends Migration
     {
         Schema::create('pakets', function (Blueprint $table) {
             $table->increments('paket_id');
-            $table->integer('laundry_id');
+            $table->integer('launderer_id');
             $table->string('name');
+            $table->string('desc');
             $table->float('harga');
             $table->timestamps();
         });
