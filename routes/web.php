@@ -19,6 +19,9 @@ Route::get('/aaa', function () {
     return view('aaa');
 });
 
+Route::get('/profile', 'ProfileController@show')->name('profile_show');
+Route::post('/profile', 'ProfileController@update')->name('profile_update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="bgsign">
+<div class="apaini">
     <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
         <h1 style="color: #464947; text-emphasis: bold;">SEKARANG TIDAK PERLU REPOT MEMBAWA LAUNDRY SENDIRI</h1>
         <div class="card" style="width: 20rem;">
@@ -42,6 +43,7 @@
                 </form>
             </div>
         </span>
+        </div>
         </div>
     </div>
 </div>
