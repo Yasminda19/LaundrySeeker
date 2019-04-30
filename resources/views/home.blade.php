@@ -5,6 +5,7 @@
     <div class="pemisah"></div>
     <div class="card-article">
       <p>{{ $user->name }}</p>
+      <p>{{ $user->launderer->lokasi }}</p>
     </div>
   @empty
     <div class="pemisah"></div>

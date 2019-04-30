@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function launderer()
+    {
+        if ($this->type === "launderer")
+            return $this->hasOne('App\Launderer');
+    }
+
 }
