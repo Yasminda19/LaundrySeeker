@@ -19,10 +19,10 @@ Route::get('/aaa', function () {
     return view('aaa');
 });
 
-Route::get('/profile', 'ProfileController@show');
+Route::get('/profile', 'ProfileController@show')->name('profile');
 Route::put('/profile', 'ProfileController@update');
 
-Route::get('/paket', 'PaketController@list');
+Route::get('/paket', 'PaketController@list')->name('paket');
 Route::get('/paket/{id}', 'PaketController@show');
 Route::delete('/paket/{id}', 'PaketController@delete');
 Route::post('/paket', 'PaketController@create');

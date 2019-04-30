@@ -29,13 +29,12 @@ class PaketController extends Controller
     public function update($id)
     {
         $paket = Paket::where('paket_id', '=', $id)->first();
-        if ($paket->launderer_id !== Auth::user()->id)
-        return view('paket');
+        if ($paket->launderer_id !== Auth::user()->id);
+        return redirect()->route('paket');
     }
 
     public function create(Request $request)
     {
-        $pakets = Auth::user()->launderer->pakets;
         if (Auth::user()->type === 'launderer') {
             Paket::create([
                 'launderer_id' => Auth::user()->id,
@@ -44,7 +43,7 @@ class PaketController extends Controller
                 'harga' => $request['harga']
             ]);
         }
-        return view('paket')->with('pakets', $pakets);
+        return redirect()->route('paket');
     }
     
     public function delete($id)
@@ -52,6 +51,6 @@ class PaketController extends Controller
         $paket = Paket::find($id);
         if (Auth::user()->id === $paket->launderer_id)
             $paket->delete();
-        return view('paket')->with('pakets', Auth::user()->launderer->pakets);
+        return redirect()->route('paket');
     }
 }

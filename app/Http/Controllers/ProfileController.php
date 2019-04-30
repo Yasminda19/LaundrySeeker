@@ -47,6 +47,6 @@ class ProfileController extends Controller
 
         $user->save();
         
-        return view('profile');
+        return redirect()->route('profile');
     }
 }
