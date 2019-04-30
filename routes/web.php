@@ -20,7 +20,7 @@ Route::get('/aaa', function () {
 });
 
 Route::get('/profile', 'ProfileController@show')->name('profile_show');
-Route::post('/profile', 'ProfileController@update')->name('profile_update');
+Route::put('/profile', 'ProfileController@update')->name('profile_update');
 
 Auth::routes();
 

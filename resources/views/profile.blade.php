@@ -7,6 +7,7 @@
                 <div class="card-header">Dashboard</div>
                 <div class="card-body">
                     <form method="POST" action="/profile">
+                        @method('PUT')
                         @csrf
                         <div class="form-group">
                             <label for="name">Name</label>
