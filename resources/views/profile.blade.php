@@ -25,11 +25,15 @@
                                 </span>
                             @endif
                             <label for="nohp">No. HP</label>
-                            <input type="nohp" class="form-control{{ $errors->has('nohp') ? ' is-invalid' : '' }}" name="nohp" value="{{ Auth::user()->nohp }}" required>
+                            <input type="text" class="form-control{{ $errors->has('nohp') ? ' is-invalid' : '' }}" name="nohp" value="{{ Auth::user()->nohp }}" required>
                             @if ($errors->has('nohp'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('nohp') }}</strong>
                                 </span>
+                            @endif
+                            @if (Auth::user()->type === "launderer")
+                                <label for="nohp">Lokasi</label>
+                                <input type="text" class="form-control" name="lokasi" value="{{ Auth::user()->launderer->lokasi }}" required>
                             @endif
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>

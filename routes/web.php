@@ -19,8 +19,8 @@ Route::get('/aaa', function () {
     return view('aaa');
 });
 
-Route::get('/profile', 'ProfileController@show')->name('profile_show');
-Route::put('/profile', 'ProfileController@update')->name('profile_update');
+Route::get('/profile', 'ProfileController@show');
+Route::put('/profile', 'ProfileController@update');
 
 Auth::routes();
 
