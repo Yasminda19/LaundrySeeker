@@ -76,7 +76,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="user-header" style="background-color: #222d32;">
-                  <img src="images/unnamed.jpg" class="img-circle" alt="User Image">
+                  <img src="{{ URL::asset('images/unnamed.jpg') }}" class="img-circle" alt="User Image">
                   <p>{{ Auth::user()->name }}</p>
                 </li>
                 <li class="user-footer">
