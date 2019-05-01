@@ -23,4 +23,14 @@ class Launderer extends Model
     {
         return $this->hasMany('App\Paket', 'launderer_id');
     }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id', 'id');
+    }
+
+    public  function scopeLike($query, $field, $value)
+    {
+        return $query->where($field, 'LIKE', "%$value%");
+    }
 }

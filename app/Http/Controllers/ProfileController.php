@@ -43,7 +43,10 @@ class ProfileController extends Controller
         $user->nohp = $request['nohp'];
 
         if ($user->type === "launderer")
-            $user->launderer->lokasi = $request['lokasi'];
+        {
+            $user->launderer->lokasi = mb_strtolower($request['lokasi'], 'UTF-8');
+            $user->launderer->save();
+        }
 
         $user->save();
         

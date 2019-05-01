@@ -1,11 +1,11 @@
 @extends('layouts.dashboard')
 
 @section('content')
-  @forelse ($users as $user)
+  @forelse ($launderers as $launderer)
     <div class="pemisah"></div>
     <div class="card-article">
-      <p>{{ $user->name }}</p>
-      <p>{{ $user->launderer->lokasi }}</p>
+      <p>{{ $launderer->user->name }}</p>
+      <p>{{ $launderer->lokasi }}</p>
     </div>
   @empty
     <div class="pemisah"></div>

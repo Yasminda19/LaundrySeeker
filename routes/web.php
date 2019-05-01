@@ -30,4 +30,5 @@ Route::put('/paket/{id}', 'PaketController@update');
 
 Auth::routes();
 
+Route::get('/home/{lokasi}', 'HomeController@search');
 Route::get('/home', 'HomeController@index')->name('home');
