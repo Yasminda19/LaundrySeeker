@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function search($lokasi)
     {
-        $launderers = Launderer::like('lokasi', mb_strtolower($lokasi, 'UTF-8'))->get();
+        $launderers = Launderer::like('lokasi', mb_strtoupper($lokasi, 'UTF-8'))->get();
         return view('home')->with('launderers', $launderers);
     }
 }
