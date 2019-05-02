@@ -22,10 +22,11 @@ Route::get('/aaa', function () {
 Route::get('/setting/profile', 'ProfileController@show')->name('profile');
 Route::put('/setting/profile', 'ProfileController@update');
 
-Route::get('/paket', 'PaketController@list')->name('paket');
 Route::get('/paket/{id}', 'PaketController@show');
+Route::get('/paket', 'PaketController@fallback')->name('paket');
 
-Route::delete('/setting/paket/{id}', 'KelolaPaketController@delete')->name('kelolapaket');
+Route::get('/setting/paket', 'KelolaPaketController@list')->name('kelolapaket');
+Route::delete('/setting/paket/{id}', 'KelolaPaketController@delete');
 Route::post('/setting/paket', 'KelolaPaketController@create');
 Route::put('/setting/paket/{id}', 'KelolaPaketController@update');
 

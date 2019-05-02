@@ -17,19 +17,21 @@ class PaketController extends Controller
     public function list(Request $request)
     {
         $pakets = Auth::user()->launderer->pakets;
-        return view('paket')->with('pakets', $pakets);
+        return view('kelolapaket')->with('pakets', $pakets);
     }
 
-    public function show($id)
-    {
-        $paket = Paket::where('paket_id', '=', $id)->get();
-        return view('paket')->with('pakets', $paket);
-    }
-
-    public function update($id)
+    public function update($id, Request $request)
     {
         $paket = Paket::where('paket_id', '=', $id)->first();
-        if ($paket->launderer_id !== Auth::user()->id);
+    
+        if ($paket->launderer_id === Auth::user()->id)
+        {
+            $paket->name = $request['nama'];
+            $paket->desc = $request['desc'];
+            $paket->harga = $request['harga'];
+            $paket->save();
+        }
+    
         return redirect()->route('paket');
     }
 
@@ -43,7 +45,7 @@ class PaketController extends Controller
                 'harga' => $request['harga']
             ]);
         }
-        return redirect()->route('paket');
+        return redirect()->route('kelolapaket');
     }
     
     public function delete($id)
