@@ -8,7 +8,7 @@
     <p>{{ $paket->harga }}</p>
     <p>{{ $paket->desc }}</p>
     <p>{{ $paket->launderer->lokasi }}</p>
-    <form method="POST" action="/setting/paket/{{ $paket->paket_id }}">
+    <form method="POST" action="/manage/paket/{{ $paket->paket_id }}">
       @csrf
       @method('DELETE')
       <button type="submit" class="btn btn-danger">{{ __('Hapus') }}</button>
@@ -19,7 +19,7 @@
 
   <div class="pemisah"></div>
   <div class="card-article">
-    <form method="POST" action="/setting/paket">
+    <form method="POST" action="/manage/paket">
     @csrf
       <div class="form-group">
         <label for="name">Nama</label>

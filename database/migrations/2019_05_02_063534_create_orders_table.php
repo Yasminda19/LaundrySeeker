@@ -17,7 +17,9 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('paket_id');
+            $table->integer('launderer_id');
             $table->double('qty', 8, 2);
+            $table->integer('harga');
             $table->timestamps();
         });
     }

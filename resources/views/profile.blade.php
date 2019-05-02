@@ -3,7 +3,7 @@
 @section('content')
     <div class="pemisah">
         <div class="card-article">
-            <form method="POST" action="/setting/profile">
+            <form method="POST" action="/manage/profile">
                 @method('PUT')
                 @csrf
                 <div class="form-group">
@@ -37,6 +37,10 @@
                     <div class="form-group">
                         <label for="lokasi">Lokasi</label>
                         <input type="text" class="form-control" name="lokasi" value="{{ Auth::user()->launderer->lokasi }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Deskripsi</label>
+                        <textarea class="form-control" name="desc" required>{{ Auth::user()->launderer->desc }}</textarea>
                     </div>
                     @endif
                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -37,7 +37,6 @@ class ProfileController extends Controller
         // $user = User::where('id', '=', Auth::user()->id)->first();
         $user = Auth::user();
 
-        
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->nohp = $request['nohp'];
@@ -45,6 +44,7 @@ class ProfileController extends Controller
         if ($user->type === "launderer")
         {
             $user->launderer->lokasi = mb_strtoupper($request['lokasi'], 'UTF-8');
+            $user->launderer->desc = $request['desc'];
             $user->launderer->save();
         }
 

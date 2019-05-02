@@ -7,16 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
-        'user_id', 'paket_id', 'qty'
+        'user_id', 'paket_id', 'qty', 'harga'
     ];
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Launderer', 'user_id', 'id');
     }
 
     public function paket()
     {
-        return $this->belongsTo('App\Paket');
+        return $this->belongsTo('App\Paket', 'paket_id', 'paket_id');
+    }
+
+    public function launderer()
+    {
+        return $this->belongsTo('App\Launderer', 'launderer_id', 'launderer_id');
     }
 }

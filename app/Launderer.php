@@ -12,7 +12,7 @@ class Launderer extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'lokasi'
+        'user_id', 'lokasi', 'desc'
     ];
 
     protected $primaryKey = "user_id";
@@ -23,7 +23,12 @@ class Launderer extends Model
     {
         return $this->hasMany('App\Paket', 'launderer_id');
     }
-    
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order', 'launderer_id');
+    }
+
     public function user()
     {
         return $this->belongsTo('App\User', 'user_id', 'id');

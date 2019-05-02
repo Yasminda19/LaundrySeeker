@@ -19,16 +19,21 @@ Route::get('/aaa', function () {
     return view('aaa');
 });
 
-Route::get('/setting/profile', 'ProfileController@show')->name('profile');
-Route::put('/setting/profile', 'ProfileController@update');
+Route::get('/manage/profile', 'ProfileController@show')->name('profile');
+Route::put('/manage/profile', 'ProfileController@update');
 
 Route::get('/paket/{id}', 'PaketController@show');
 Route::get('/paket', 'PaketController@fallback')->name('paket');
 
-Route::get('/setting/paket', 'KelolaPaketController@list')->name('kelolapaket');
-Route::delete('/setting/paket/{id}', 'KelolaPaketController@delete');
-Route::post('/setting/paket', 'KelolaPaketController@create');
-Route::put('/setting/paket/{id}', 'KelolaPaketController@update');
+Route::get('/manage/paket', 'KelolaPaketController@list')->name('kelolapaket');
+Route::delete('/manage/paket/{id}', 'KelolaPaketController@delete');
+Route::post('/manage/paket', 'KelolaPaketController@create');
+Route::put('/manage/paket/{id}', 'KelolaPaketController@update');
+
+Route::get('/order/{id}', 'OrderController@show');
+Route::get('/order', 'OrderController@list')->name('order');
+Route::post('/order/new/{id}', 'OrderController@create');
+Route::get('/order/new/{id}', 'OrderController@create_form');
 
 Auth::routes();
 

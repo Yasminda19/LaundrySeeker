@@ -7,6 +7,7 @@
       <div class="card-article">
         <p>{{ $launderer->user->name }}</p>
         <p>{{ $launderer->lokasi }}</p>
+        <p>{{ $launderer->desc }}</p>
       </div>
     </a>
   @empty

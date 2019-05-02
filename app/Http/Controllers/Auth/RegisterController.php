@@ -78,6 +78,7 @@ class RegisterController extends Controller
             Launderer::create([
                 'user_id' => $user->id,
                 'lokasi' => mb_strtoupper($data['lokasi'], 'UTF-8'),
+                'desc' => 'Belum ada info.',
             ]);
         }
      

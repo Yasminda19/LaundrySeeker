@@ -8,6 +8,7 @@
     <p>{{ $paket->harga }}</p>
     <p>{{ $paket->desc }}</p>
     <p>{{ $paket->launderer->lokasi }}</p>
+    <a href="/order/new/{{ $paket->paket_id }}"><i class="fa fa-plus"></i>Buat pesanan</a>
   </div>
   @empty
   <div class="pemisah"></div>
