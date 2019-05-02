@@ -21,5 +21,10 @@ class Paket extends Model
     {
         return $this->belongsTo('App\Launderer', 'launderer_id', 'user_id');
     }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
 }
 

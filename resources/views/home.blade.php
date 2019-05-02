@@ -2,11 +2,13 @@
 
 @section('content')
   @forelse ($launderers as $launderer)
-    <div class="pemisah"></div>
-    <div class="card-article">
-      <p>{{ $launderer->user->name }}</p>
-      <p>{{ $launderer->lokasi }}</p>
-    </div>
+    <a href="/paket/{{ $launderer->user_id }}">
+      <div class="pemisah"></div>
+      <div class="card-article">
+        <p>{{ $launderer->user->name }}</p>
+        <p>{{ $launderer->lokasi }}</p>
+      </div>
+    </a>
   @empty
     <div class="pemisah"></div>
     <div class="card-article">
