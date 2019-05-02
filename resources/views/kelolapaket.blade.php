@@ -6,6 +6,7 @@
   <div class="card-article">
     <p>{{ $paket->name }}</p>
     <p>{{ $paket->harga }}</p>
+    <p>{{ $paket->desc }}</p>
     <p>{{ $paket->launderer->lokasi }}</p>
     <form method="POST" action="/setting/paket/{{ $paket->paket_id }}">
       @csrf
