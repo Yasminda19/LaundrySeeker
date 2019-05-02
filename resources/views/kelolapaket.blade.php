@@ -7,8 +7,7 @@
     <p>{{ $paket->name }}</p>
     <p>{{ $paket->harga }}</p>
     <p>{{ $paket->launderer->lokasi }}</p>
-    @if (Auth::user()->type === "launderer")
-    <form method="POST" action="/paket/{{ $paket->paket_id }}">
+    <form method="POST" action="/setting/paket/{{ $paket->paket_id }}">
       @csrf
       @method('DELETE')
       <button type="submit">{{ __('Hapus') }}</button>
@@ -19,7 +18,7 @@
 
   <div class="pemisah"></div>
   <div class="card-article">
-    <form method="POST" action="/paket">
+    <form method="POST" action="/setting/paket">
     @csrf
       <div class="form-group">
         <label for="name">Nama</label>

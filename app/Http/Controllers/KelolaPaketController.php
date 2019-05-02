@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Paket;
 
-class PaketController extends Controller
+class KelolaPaketController extends Controller
 {
     // Must be signed in.
     public function __construct()
@@ -32,7 +32,7 @@ class PaketController extends Controller
             $paket->save();
         }
     
-        return redirect()->route('paket');
+        return redirect()->route('kelolapaket');
     }
 
     public function create(Request $request)
