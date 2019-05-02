@@ -22,8 +22,8 @@ class PaketController extends Controller
 
     public function show($id)
     {
-        $paket = Paket::where('paket_id', '=', $id)->first();
-        return view('paket_id')->with('paket', $paket);
+        $paket = Paket::where('paket_id', '=', $id)->get();
+        return view('paket')->with('pakets', $paket);
     }
 
     public function update($id)
@@ -51,6 +51,6 @@ class PaketController extends Controller
         $paket = Paket::find($id);
         if (Auth::user()->id === $paket->launderer_id)
             $paket->delete();
-        return redirect()->route('paket');
+        return redirect()->route('kelolapaket');
     }
 }

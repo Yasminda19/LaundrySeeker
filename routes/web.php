@@ -19,14 +19,15 @@ Route::get('/aaa', function () {
     return view('aaa');
 });
 
-Route::get('/profile', 'ProfileController@show')->name('profile');
-Route::put('/profile', 'ProfileController@update');
+Route::get('/setting/profile', 'ProfileController@show')->name('profile');
+Route::put('/setting/profile', 'ProfileController@update');
 
 Route::get('/paket', 'PaketController@list')->name('paket');
 Route::get('/paket/{id}', 'PaketController@show');
-Route::delete('/paket/{id}', 'PaketController@delete');
-Route::post('/paket', 'PaketController@create');
-Route::put('/paket/{id}', 'PaketController@update');
+
+Route::delete('/setting/paket/{id}', 'KelolaPaketController@delete')->name('kelolapaket');
+Route::post('/setting/paket', 'KelolaPaketController@create');
+Route::put('/setting/paket/{id}', 'KelolaPaketController@update');
 
 Auth::routes();
 
