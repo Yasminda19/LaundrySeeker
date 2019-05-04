@@ -16,6 +16,7 @@ class CreateLaunderersTable extends Migration
         Schema::create('launderers', function (Blueprint $table) {
             $table->integer('user_id');
             $table->string('lokasi');
+            $table->string('desc');
             $table->timestamps();
         });
     }

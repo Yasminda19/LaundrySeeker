@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Launderer;
 
 class PaketController extends Controller
 {
@@ -12,8 +14,14 @@ class PaketController extends Controller
         $this->middleware('auth');
     }
 
-    public function create(Request $request)
+    public function show($id)
     {
-        return Paket::create();
+        $launderer = Launderer::find($id)->first();
+        return view('paket')->with('pakets', $launderer->pakets);
+    }
+
+    public function fallback()
+    {
+        return view('paket')->with('pakets', []);
     }
 }

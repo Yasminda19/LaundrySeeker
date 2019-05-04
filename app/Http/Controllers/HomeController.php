@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Launderer;
 
 class HomeController extends Controller
 {
@@ -24,7 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::where('type', '=', 'launderer')->get();
-        return view('home')->with('users', $users);
+        $launderers = Launderer::all();
+        return view('home')->with('launderers', $launderers);
+    }
+
+    public function search($lokasi)
+    {
+        $launderers = Launderer::like('lokasi', mb_strtoupper($lokasi, 'UTF-8'))->get();
+        return view('home')->with('launderers', $launderers);
     }
 }

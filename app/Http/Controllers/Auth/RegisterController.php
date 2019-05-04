@@ -77,7 +77,8 @@ class RegisterController extends Controller
         if ($data['type'] === "launderer") {
             Launderer::create([
                 'user_id' => $user->id,
-                'lokasi' => $data['lokasi'],
+                'lokasi' => mb_strtoupper($data['lokasi'], 'UTF-8'),
+                'desc' => 'Belum ada info.',
             ]);
         }
      

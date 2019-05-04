@@ -24,9 +24,6 @@ class ProfileController extends Controller
      */
     public function show()
     {
-        $user = Auth::user();
-        if ($user->type === "launderer")
-            return view('profile')->with('launderer', Launderer::where('user_id', '=', $user->id)->first());
         return view('profile');
     }
 
@@ -40,18 +37,19 @@ class ProfileController extends Controller
         // $user = User::where('id', '=', Auth::user()->id)->first();
         $user = Auth::user();
 
-        
         $user->name = $request['name'];
         $user->email = $request['email'];
-        $user->name = $request['nohp'];
-        $user->save();
-        
-        if ($user->type === "launderer") {
-            $launderer = Launderer::where('user_id', '=', $user->id)->first();
-            $launderer->lokasi = $request['lokasi'];
-            $launderer->save();
+        $user->nohp = $request['nohp'];
+
+        if ($user->type === "launderer")
+        {
+            $user->launderer->lokasi = mb_strtoupper($request['lokasi'], 'UTF-8');
+            $user->launderer->desc = $request['desc'];
+            $user->launderer->save();
         }
 
-        return view('profile')->with();
+        $user->save();
+        
+        return redirect()->route('profile');
     }
 }
