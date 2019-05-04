@@ -37,11 +37,8 @@
                     @else
                         <li class="nav-item">
                             @if (Auth::user()->type === "launderer")
-                                <a class="nav-link" href="#">Opsi khusus launderer</a>
+                                <a class="nav-link" href="#">tambah</a>
                             @endif
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #fff">Cari Laundry</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
