@@ -33,6 +33,12 @@ class OrderController extends Controller
         return view('order');
     }
 
+    public function delete_order($id)
+    {
+        $order = Order::find($id);
+        $order -> delete();
+    }
+    
     public function create_form($id)
     {
         $paket = Paket::find($id);
