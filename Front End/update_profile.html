@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://localhost:8000/manage/profile -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./profile_files/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./profile_files/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="./profile_files/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./profile_files/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+        folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="./profile_files/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="./profile_files/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="./profile_files/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="./profile_files/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="./profile_files/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="./profile_files/bootstrap3-wysihtml5.min.css">
+  <link href="./profile_files/swiper.min.css" rel="stylesheet">
+
+  <!-- jQuery library -->
+  <script src="./profile_files/jquery.min.js.download"></script>
+  <script src="./profile_files/swiper.min.js.download"></script>
+  <script src="./profile_files/jquery.min.js(1).download"></script>
+  <script src="./profile_files/popper.min.js.download"></script>
+  <script src="./profile_files/bootstrap.min.js.download"></script>
+  <style>
+    .pemisah {
+        height: 40px;
+    }
+    .pembagi-card {
+        padding-top: 100px;
+    }
+    .card-article {
+        width: 95%;
+        position: relative;
+        max-width: 1200px;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+        padding: 25px;
+        border-radius: 25px;
+        height: 400px;
+        transition: all .3s;
+    }
+  </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini" cz-shortcut-listen="true">
+  <div class="wrapper">
+
+    <!-- TOP Navbar -->
+    <header class="main-header">
+      <a href="http://localhost:8000/manage/index2.html" class="logo" style="background-color :#419097; ">
+        <span class="logo-lg"><b>Laravel</b></span>
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #419097">
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="http://localhost:8000/manage/profile#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="./profile_files/unnamed.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">Amin</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header" style="background-color: #222d32;">
+                  <img src="./profile_files/unnamed.jpg" class="img-circle" alt="User Image">
+                  <p>Amin</p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a class="dropdown-item" href="http://localhost:8000/logout" onclick="event.preventDefault();
+                        document.getElementById(&#39;logout-form&#39;).submit();">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="http://localhost:8000/logout" method="POST" style="display: none;">
+                        <input type="hidden" name="_token" value="ajpaWlUbNypwMA7F1hlMqfFx5OBNwyfgWaUwsyTu">                    </form>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <aside class="main-sidebar">
+      <section class="sidebar" style="height: auto;">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img class="img-circle" alt="User Image" src="./profile_files/unnamed.jpg">
+          </div>
+          <div class="pull-left info">
+            <p>Amin</p>
+            <p>
+                              Pengguna Laundry
+                          </p>
+          </div>
+        </div>
+        <!-- search form -->
+        <form class="sidebar-form" action="http://localhost:8000/manage/profile#" method="get">
+          <input type="hidden" name="_token" value="ajpaWlUbNypwMA7F1hlMqfFx5OBNwyfgWaUwsyTu">          <div class="input-group">
+            <input type="text" name="search" placeholder="Cari sesuatu...">
+          </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu tree" data-widget="tree">
+          <li><a href="http://localhost:8000/home"><i class="fa fa-search"></i> <span>Cari Laundry</span></a></li>
+          <li><a href="http://localhost:8000/order"><i class="fa fa-book"></i> <span>Riwayat Pesanan</span></a></li>
+                    <li><a href="http://localhost:8000/manage/profile"><i class="fa fa-gear"></i> <span>Profile</span></a></li>
+        </ul>
+      </section>
+    </aside>    
+    <!-- Main -->
+    <div class="content-wrapper">
+          <div class="pemisah">
+        <div class="card-article">
+            <form method="POST" action="http://localhost:8000/manage/profile">
+                <input type="hidden" name="_method" value="PUT">                <input type="hidden" name="_token" value="ajpaWlUbNypwMA7F1hlMqfFx5OBNwyfgWaUwsyTu">                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="name" class="form-control" name="name" value="Amin" required="" autofocus="">
+                                    </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" value="dumdum@gmail.com" required="">
+                                    </div>
+                <div class="form-group">
+                    <label for="nohp">No. HP</label>
+                    <input type="text" class="form-control" name="nohp" value="081266285234" required="">
+                                    </div>
+
+                <div class="form-group">
+                    <label for="nohp">Password Baru</label>
+                    <input type="password" class="form-control" name="nohp" value="081266285234" required="">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+  </div>
+</body></html>
