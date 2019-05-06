@@ -22,6 +22,6 @@ class Order extends Model
 
     public function launderer()
     {
-        return $this->belongsTo('App\Launderer', 'launderer_id', 'launderer_id');
+        return $this->belongsTo('App\Launderer', 'launderer_id', 'user_id');
     }
 }

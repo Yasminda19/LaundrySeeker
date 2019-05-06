@@ -38,7 +38,12 @@ class OrderController extends Controller
     public function delete_order($id)
     {
         $order = Order::find($id);
-        $order -> delete();
+        $user = Auth::user();
+
+        if ($order->user->id === $user->id)
+            $order -> delete();
+
+        return view('order')->with('orders', $user->orders);
     }
     
     public function create_form($id)
