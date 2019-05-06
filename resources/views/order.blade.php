@@ -6,8 +6,14 @@
     <div class="pemisah"></div>
     <div class="card-article">
       <p>{{ $order->paket->name }} @ Rp{{ $order->paket->harga }}/kg [{{ $order->launderer->user->name }}] </p>
+      <p>{{ $order->launderer->user->nohp }}</p>
       <p>{{ $order->qty }} kg</p>
       <p>Rp{{ $order->harga }}</p>
+      <form method="POST" action="/order/{{ $order->id }}">
+        @method('DELETE')
+        @csrf
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
     </div>
   @empty
     <div class="pemisah"></div>

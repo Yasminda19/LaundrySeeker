@@ -33,6 +33,7 @@ Route::put('/manage/paket/{id}', 'KelolaPaketController@update');
 Route::get('/manage/order', 'OrderController@list_launderer');
 
 Route::get('/order/{id}', 'OrderController@show');
+Route::get('/order/{id}', 'OrderController@delete_order');
 Route::get('/order', 'OrderController@list')->name('order');
 Route::post('/order/new/{id}', 'OrderController@create');
 Route::get('/order/new/{id}', 'OrderController@create_form');
