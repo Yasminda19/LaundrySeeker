@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	<!-- Fontfaces CSS-->
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo3.png">
+  <title>Laundry Seeket - Memudahkan anda mencari laundry</title>
+  <!-- This page CSS -->
+  <!-- chartist CSS -->
+  <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+  <!--c3 plugins CSS -->
+  <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="dist/css/style.css" rel="stylesheet">
+  <!-- Dashboard 1 Page CSS -->
+  <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+     <style>
+
+        .pemisah{
+            height: 40px;
+        }
+
+        
+        .pembagi-card{
+            padding-top: 100px;
+
+        }
+    
+        .card-article{
+            width: 90%;
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0px 5px 5px rgba(34, 35, 58, 0.2);
+            padding: 25px;
+            border-radius: 25px;
+            height: 10%;
+            transition: all .3s;
+
+}
+
+
+    </style>
+
+    
+</head>
+    
+<body class="skin-default-dark fixed-layout">
+
+                <div id="main-wrapper">
+                  <!-- ============================================================== -->
+                  <!-- Topbar header - style you can find in pages.scss -->
+                  <!-- ============================================================== -->
+                  <header class="topbar">
+                      <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                          <div class="navbar-header">
+                              <a class="navbar-brand" href="browse.html" style="color: #464947"><b>LAUNDRYSEEKER</b>
+                          </div>
+                          <div class="navbar-collapse">
+                              <ul class="navbar-nav mr-auto">
+                                  <!-- This is  -->
+                                  <li class="nav-item hidden-sm-up"> <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                                
+                                  <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                                      <form class="app-search">
+                                          <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="fa fa-times"></i></a>
+                                      </form>
+                                  </li>
+                              </ul>
+                              <ul class="navbar-nav my-lg-0">
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="profile.html"  aria-haspopup="true" aria-expanded="false"><img src="images/unnamed.jpg" alt="User Image" class="img-circle" width="30"></a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </nav>
+                  </header>
+
+
+                  <aside class="left-sidebar">
+                      <div class="d-flex no-block nav-text-box align-items-center">
+                          <span>LAUNDRYSEEKER</span>
+                          <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+                          <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                      </div>
+                      <!-- Sidebar scroll-->
+                      <div class="scroll-sidebar">
+                          <!-- Sidebar navigation-->
+                          <nav class="sidebar-nav">
+                              <ul id="sidebarnav">
+                                  <li><a class="waves-effect waves-dark" href="browse.html"  aria-expanded="false"><i class="fa fa-search"></i> <span>Cari Laundry</span></a></li>
+                                  <li><a class="waves-effect waves-dark" href="timestamp.html"  aria-expanded="false" ><i class="fa fa-money"></i> <span>Proses Pengerjaan</span></a></li>
+                                  <li><a class="waves-effect waves-dark" href="setting.html"  aria-expanded="false"><i class="fa fa-gear"></i> <span>Setting</span></a></li>
+                                  <li><a class="waves-effect waves-dark" href="setting.html"  aria-expanded="false"><i class="fa fa-gear"></i> <span>Profil</span></a></li>
+                                  <div class="text-center m-t-30">
+                                      <a href="index.html" class="btn waves-effect waves-light btn-success hidden-md-down">SIGN OUT</a>
+                                  </div>
+                              </ul>
+                          </nav>
+                          <!-- End Sidebar navigation -->
+                      </div>
+                      <!-- End Sidebar scroll-->
+                  </aside>
+                
+                  <div class="page-wrapper">
+                      <!-- ============================================================== -->
+                      <!-- Container fluid  -->
+                      <!-- ============================================================== -->
+                      <div class="container-fluid">
+                          <!-- ============================================================== -->
+                          <!-- Bread crumb and right sidebar toggle -->
+                          <!-- ============================================================== -->
+                          <div class="row page-titles">
+                              <div class="col-md-5 align-self-center">
+                                    <H1><b>PROSES PENGERJAAN</b></H1>
+                              </div>
+                              <div class="col-md-7 align-self-center text-right">
+                                  <div class="d-flex justify-content-end align-items-center">
+                                      <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                          <li class="breadcrumb-item active">Cari Laundry</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="content-wrapper" style="margin:40px; border: 1cm">
+                                      <div class="card">
+                                              <div class="table-responsive">
+                                                <table class="table no-margin">
+                                                  <thead>
+                                                  <tr>
+                                                    <th>User</th>
+                                                    <th>Nama User</th>
+                                                    <th>Status</th>
+                                                    <th>Sisa Waktu</th>
+                                                  </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                  <tr width="40px">
+                                                    <td><img src="images/unnamed.jpg" class="img-circle" width="30px"></td>
+                                                    <td>Mamang Garox</td>
+                                                    <td><span class="label label-success">Selesai</span></td>
+                                                    <td>
+                                                            0d 0h 0m 0s</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                        <td><img src="images/unnamed.jpg" style="align:center" class="img-circle" width="30"></td>
+                                                        <td>Mbak Yeyen</td>
+                                                        <td><span class="label label-warning">on Progress</span></td>
+                                                        <td>
+                                                                <p id="demo"></p></td>
+                                                      </tr>
+                                                      <tr>
+                                                            <td><img src="images/unnamed.jpg" style="align:center" class="img-circle" width="30"></td>
+                                                            <td>John Cena</td>
+                                                            <td><span class="label label-danger">Cancelled</span></td>
+                                                            <td>
+                                                                    0d 0h 0m 0s</p></td>
+                                                          </tr>
+                                                          <tr>
+                                                                <td><img src="images/unnamed.jpg" style="align:center" class="img-circle" width="30"></td>
+                                                                <td>Takoyakee</td>
+                                                                <td><span class="label label-warning">on Progress</span></td>
+                                                                <td>
+                                                                        <p id="nani"></p></td>
+                                                              </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                      </div>
+                                      </div>
+                                    </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 8, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  document.getElementById("nani").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("nani").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</body>
+</html>
