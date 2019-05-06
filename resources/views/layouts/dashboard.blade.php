@@ -51,7 +51,7 @@
         box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
         padding: 25px;
         border-radius: 25px;
-        height: 200px;
+        min-height: 200px;
         transition: all .3s;
     }
   </style>

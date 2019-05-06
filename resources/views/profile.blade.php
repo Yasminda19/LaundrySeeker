@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <div class="pemisah">
+    <div class="pemisah"></div>
         <div class="card-article">
             <form method="POST" action="/manage/profile">
                 @method('PUT')
@@ -46,5 +46,5 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-    </div>
+
 @endsection
