@@ -52,4 +52,21 @@ class ProfileController extends Controller
         
         return redirect()->route('profile');
     }
+
+    public function image(Request $request)
+    {
+        request()->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+        request()->image->move(public_path('images'), $imageName);
+
+        $user = Auth::user();
+
+        $user->image_path = $imageName;
+        $user->save();
+
+        return redirect()->route('profile');        
+    }
 }

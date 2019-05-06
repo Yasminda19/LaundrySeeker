@@ -24,10 +24,10 @@
       @for ($j = $i; $j < count($launderers) && $j < $i + 3; $j++)
         <div class="col">
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{URL::asset('images/gambarlaundry/86487-5098f4378f9135337e98a752d18d109a.JPG')}}" alt="Card image cap">
+            <img class="card-img-top" src='{{URL::asset("/images/".$launderers[$j]->user->image_path)}}' alt="Card image cap">
             <div class="card-body" style="align-items:center;">
               <h5 class="card-title"><b>{{ $launderers[$j]->user->name }}</b></h5>
-              <span class="label label-success">BUKA SEKARANG</span>
+              <span class="label label-success">BUKA SELAMANYA</span>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">{{ $launderers[$j]->desc }}</li>

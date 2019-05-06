@@ -82,7 +82,7 @@
                 </ul>
                 <ul class="navbar-nav my-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="/manage/profile"  aria-haspopup="true" aria-expanded="false"><img src="{{URL::asset('images/unnamed.jpg')}}" alt="User Image" class="img-circle" width="30"></a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="/manage/profile"  aria-haspopup="true" aria-expanded="false"><img src='{{URL::asset("/images/".Auth::user()->image_path)}}' alt="User Image" class="img-circle" width="30"></a>
                     </li>
                 </ul>
             </div>

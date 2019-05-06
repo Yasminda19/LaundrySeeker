@@ -21,6 +21,7 @@ Route::get('/aaa', function () {
 
 Route::get('/manage/profile', 'ProfileController@show')->name('profile');
 Route::put('/manage/profile', 'ProfileController@update');
+Route::post('/manage/profile/image', 'ProfileController@image');
 
 Route::get('/paket/{id}', 'PaketController@show');
 Route::get('/paket', 'PaketController@fallback')->name('paket');

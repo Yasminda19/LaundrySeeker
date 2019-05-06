@@ -22,7 +22,7 @@
               @foreach ($orders as $order)
               <tr>
                 <td>{{ $order->launderer->user->name }} [{{ $order->launderer->user->nohp }}]</td>
-                <td>{{ $order->harga }}/kg</td>
+                <td>{{ $order->harga }}</td>
                 @switch($order->status_code)
                     @case(0)
                       <td><span class="label label-warning">Pengambilan Cucian</span></td>

@@ -25,7 +25,7 @@
         <div class="col-lg-4 col-xlg-3 col-md-5">
             <div class="card">
                 <div class="card-body">
-                    <center class="m-t-30"> <img src="{{URL::asset('images/unnamed.jpg')}}" class="img-circle" width="150" />
+                    <center class="m-t-30"> <img src='{{URL::asset("/images/".Auth::user()->image_path)}}' class="img-circle" width="150" />
                         <h4 class="card-title m-t-10">{{ Auth::user()->name }}</h4>
                         <h6 class="card-subtitle">
                             @if (Auth::user()->type === "launderer")
@@ -36,6 +36,20 @@
                         </h6>
                         <div class="row text-center justify-content-md-center"></div>
                     </center>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/manage/profile/image" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="image">Upload Picture</label>
+                            <input type="file" name="image" class="form-control form-control-file">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Upload</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -87,6 +101,7 @@
                         </div>
                     </form>
                 </div>
+                <div class="pemisah"></div>
             </div>
         </div>
         </div>

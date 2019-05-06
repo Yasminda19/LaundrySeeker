@@ -3,6 +3,7 @@
 @section('content')
 <div class="page-wrapper">
 <div class="container-fluid">
+  <div class="container">
     <div class="card">
       <div class="table-responsive">
         <table class="table no-margin">
@@ -23,8 +24,8 @@
               <td>
                 <form method="POST" action="/manage/paket/{{ $paket->paket_id }}">@csrf @method('DELETE')
                   <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> {{ __('Hapus') }}</button>
+                  <a href="#/manage/paket/{{ $paket->paket_id }}" class="btn btn-primary"><i class="fa fa-gear"></i> Ubah</a>
                 </form>
-                <a href="#/manage/paket/{{ $paket->paket_id }}" class="btn btn-primary"><i class="fa fa-gear"></i> Ubah</a>
               </td>
             </tr>
             @empty
@@ -33,6 +34,7 @@
         </table>
       </div>
     </div>
+  </div>
   <div class="pemisah"></div>
   <div class="card-article">
     <h1>Tambah Paketan</h1>

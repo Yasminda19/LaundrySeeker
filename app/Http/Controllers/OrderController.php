@@ -58,10 +58,13 @@ class OrderController extends Controller
         $order = Order::find($id);
         $user = Auth::user();
 
-        if ($order->launderer_id === $user->id)
+        if ($order->launderer_id === $user->id || $order->user_id === $user->id)
             $order -> delete();
 
-        return redirect()->route('kelolaorder');
+        if (Auth::user()->type !== "launderer")
+            return redirect()->route('order');
+        else
+            return redirect()->route('kelolaorder');
     }
     
     public function create_form($id)
