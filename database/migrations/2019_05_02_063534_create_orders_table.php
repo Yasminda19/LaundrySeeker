@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->integer('launderer_id');
             $table->double('qty', 8, 2);
             $table->integer('harga');
+            $table->integer('status_code');
             $table->timestamps();
         });
     }

@@ -45,6 +45,7 @@
                     <th>Nama Paket</th>
                     <th>Harga</th>
                     <th>Waktu Pengerjaan</th>
+                    <th style="text-align:center"><i class="fa fa-gear"></i> Sesuatu</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -53,7 +54,7 @@
                       <td>{{ $paket->name }}</td>
                       <td>{{ $paket->harga }}/kg</td>
                       <td><span class="label label-success">{{ $paket->desc }}</span></td>
-                      <td><a href="/order/new/{{ $paket->paket_id }}" class="btn btn-primary"><i class="fa fa-plus"></i> Buat pesanan</a></td>
+                      <td><a href="/order/new/{{ $paket->paket_id }}" class="label label-primary"><i class="fa fa-plus"></i> Buat pesanan</a></td>
                     </tr>
                     @empty
                   @endforelse

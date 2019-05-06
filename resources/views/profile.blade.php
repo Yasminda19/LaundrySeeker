@@ -45,36 +45,38 @@
             <div class="card">
                 <!-- Tab panes -->
                 <div class="card-body">
-                    <form class="form-horizontal form-material">
+                    <form class="form-horizontal form-material" action="/manage/profile" method="POST">
+                        @csrf
+                        @method('PUT')
                         <div class="form-group">
                             <label class="col-md-12">Full Name</label>
                             <div class="col-md-12">
-                                <input type="text" value="{{Auth::user()->name}}" class="form-control form-control-line">
+                                <input type="text" name="name" value="{{Auth::user()->name}}" class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="example-email" class="col-md-12">Email</label>
                             <div class="col-md-12">
-                                <input type="email" value="{{Auth::user()->email}}" class="form-control form-control-line" name="example-email" id="example-email">
+                                <input type="email" name="email" value="{{Auth::user()->email}}" class="form-control form-control-line" name="example-email" id="example-email">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12">Phone No</label>
                             <div class="col-md-12">
-                                <input type="text" value="{{Auth::user()->nohp}}" class="form-control form-control-line">
+                                <input type="text" name="nohp" value="{{Auth::user()->nohp}}" class="form-control form-control-line">
                             </div>
                         </div>
                         @if (Auth::user()->type === "launderer")
                             <div class="form-group">
                                 <label class="col-md-12">Lokasi</label>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-line" value="{{Auth::user()->launderer->lokasi}}">
+                                    <input type="text" name="lokasi" class="form-control form-control-line" value="{{Auth::user()->launderer->lokasi}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Message</label>
                                 <div class="col-md-12">
-                                    <textarea rows="5" class="form-control form-control-line">{{Auth::user()->launderer->desc}}</textarea>
+                                    <textarea name="desc" rows="5" class="form-control form-control-line">{{Auth::user()->launderer->desc}}</textarea>
                                 </div>
                             </div>
                         @endif

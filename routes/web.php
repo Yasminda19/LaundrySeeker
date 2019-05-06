@@ -30,7 +30,9 @@ Route::delete('/manage/paket/{id}', 'KelolaPaketController@delete');
 Route::post('/manage/paket', 'KelolaPaketController@create');
 Route::put('/manage/paket/{id}', 'KelolaPaketController@update');
 
-Route::get('/manage/order', 'OrderController@list_launderer');
+Route::get('/manage/order', 'OrderController@list_launderer')->name('kelolaorder');
+Route::get('/manage/order/{id}', 'OrderController@update_form');
+Route::put('/manage/order', 'OrderController@update');
 
 Route::get('/order/{id}', 'OrderController@show');
 Route::delete('/order/{id}', 'OrderController@delete_order');
