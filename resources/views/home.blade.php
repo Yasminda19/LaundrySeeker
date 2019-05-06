@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
+  <div class="pemisah"></div>
   @forelse ($launderers as $launderer)
       <div class="pemisah"></div>
       <div class="card-article">

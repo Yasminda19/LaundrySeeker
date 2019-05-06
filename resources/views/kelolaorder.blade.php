@@ -1,7 +1,8 @@
 @extends('layouts.dashboard')
 
 @section('content')
-  @forelse ($orders as $order)
+<div class="pemisah"></div>
+@forelse ($orders as $order)
     <div class="pemisah"></div>
     <div class="card-article">
       <p>{{ $order->user->name }} </p>
@@ -11,8 +12,10 @@
     </div>
   @empty
     <div class="pemisah"></div>
-    <div class="alert alert-warning" role="alert">
-      what the fuck, get some order(s) man!
+    <div class="card-article" style="min-height:100px">
+      <div class="alert alert-warning" role="alert">
+        what the fuck, get some order(s) man!
+      </div>
     </div>
   @endforelse
 @endsection

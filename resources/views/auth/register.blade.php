@@ -74,7 +74,7 @@ function appendNewDiv(){
                     <div class="lokasi">
                         <div class="form-group" id="lokasi">
                             <label for="lokasi">Lokasi</label>
-                            <input type="password" name="lokasi" class="form-control" required placeholder="Kamu dimana?">
+                            <input type="text" name="lokasi" class="form-control" required placeholder="Kamu dimana?">
                         </div>
                     </div>
                     <div class="text">

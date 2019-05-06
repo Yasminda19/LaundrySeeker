@@ -3,6 +3,7 @@
 @section('content')
   @forelse ($pakets as $paket)
   <div class="pemisah"></div>
+  <div class="pemisah"></div>
   <div class="card-article">
     <p>{{ $paket->name }}</p>
     <p>{{ $paket->harga }}</p>
@@ -19,6 +20,7 @@
 
   <div class="pemisah"></div>
   <div class="card-article">
+    <h1>Tambah Paketan</h1>
     <form method="POST" action="/manage/paket">
     @csrf
       <div class="form-group">
@@ -36,4 +38,5 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+  <div class="pemisah"></div>
 @endsection

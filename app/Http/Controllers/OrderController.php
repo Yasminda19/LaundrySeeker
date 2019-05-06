@@ -32,7 +32,7 @@ class OrderController extends Controller
             ]);
         }
 
-        return view('order');
+        return redirect()->route('order');
     }
 
     public function delete_order($id)
@@ -43,7 +43,7 @@ class OrderController extends Controller
         if ($order->user->id === $user->id)
             $order -> delete();
 
-        return view('order')->with('orders', $user->orders);
+        return redirect()->route('order');
     }
     
     public function create_form($id)

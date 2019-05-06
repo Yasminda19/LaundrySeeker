@@ -16,7 +16,7 @@ class PaketController extends Controller
 
     public function show($id)
     {
-        $launderer = Launderer::find($id)->first();
+        $launderer = Launderer::find($id);
         return view('paket')->with('pakets', $launderer->pakets);
     }
 
