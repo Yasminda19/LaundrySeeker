@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	<!-- Fontfaces CSS-->
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo3.png">
+  <title>Laundry Seeket - Memudahkan anda mencari laundry</title>
+  <!-- This page CSS -->
+  <!-- chartist CSS -->
+  <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+  <!--c3 plugins CSS -->
+  <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="dist/css/style.css" rel="stylesheet">
+  <!-- Dashboard 1 Page CSS -->
+  <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <style>
+        .pemisah{
+            height: 40px;
+        }
+
+        
+        .pembagi-card{
+            padding-top: 100px;
+
+        }
+    
+.card-article{
+    width: 95%;
+    position: relative;
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+      padding: 25px;
+      border-radius: 25px;
+      height: 200px;
+    transition: all .3s;
+
+}
+    </style>
+
+    
+</head>
+    
+<body class="skin-default-dark fixed-layout">
+
+                <div id="main-wrapper">
+                  <!-- ============================================================== -->
+                  <!-- Topbar header - style you can find in pages.scss -->
+                  <!-- ============================================================== -->
+                  <header class="topbar">
+                      <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                          <div class="navbar-header">
+                              <a class="navbar-brand" href="browse.html" style="color: #464947"><b>LAUNDRYSEEKER</b>
+                          </div>
+                          <div class="navbar-collapse">
+                              <ul class="navbar-nav mr-auto">
+                                  <!-- This is  -->
+                                  <li class="nav-item hidden-sm-up"> <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                                
+                                  <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                                      <form class="app-search">
+                                          <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="fa fa-times"></i></a>
+                                      </form>
+                                  </li>
+                              </ul>
+                              <ul class="navbar-nav my-lg-0">
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="profile.html"  aria-haspopup="true" aria-expanded="false"><img src="images/unnamed.jpg" alt="User Image" class="img-circle" width="30"></a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </nav>
+                  </header>
+
+
+                  <aside class="left-sidebar">
+                      <div class="d-flex no-block nav-text-box align-items-center">
+                          <span>LAUNDRYSEEKER</span>
+                          <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+                          <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                      </div>
+                      <!-- Sidebar scroll-->
+                      <div class="scroll-sidebar">
+                          <!-- Sidebar navigation-->
+                          <nav class="sidebar-nav">
+                              <ul id="sidebarnav">
+                                  <li><a class="waves-effect waves-dark" href="browse.html"  aria-expanded="false"><i class="fa fa-search"></i> <span>Cari Laundry</span></a></li>
+                                  <li><a class="waves-effect waves-dark" href="pesanan.html"  aria-expanded="false" ><i class="fa fa-money"></i> <span>Pesanan Anda</span></a></li>
+                                  <li><a class="waves-effect waves-dark" href="setting.html"  aria-expanded="false"><i class="fa fa-gear"></i> <span>Atur Laman Anda</span></a></li>
+                                  <li><a class="waves-effect waves-dark" href="profile.html"  aria-expanded="false"><i class="fa fa-gear"></i> <span>Profil</span></a></li>
+                                  <div class="text-center m-t-30">
+                                      <a href="index.html" class="btn waves-effect waves-light btn-success hidden-md-down">SIGN OUT</a>
+                                  </div>
+                              </ul>
+                          </nav>
+                          <!-- End Sidebar navigation -->
+                      </div>
+                      <!-- End Sidebar scroll-->
+                  </aside>
+                
+                  <div class="page-wrapper">
+                      <!-- ============================================================== -->
+                      <!-- Container fluid  -->
+                      <!-- ============================================================== -->
+                      <div class="container-fluid">
+                          <!-- ============================================================== -->
+                          <!-- Bread crumb and right sidebar toggle -->
+                          <!-- ============================================================== -->
+                          <div class="row page-titles">
+                              <div class="col-md-5 align-self-center">
+                                  <h4 class="text-themecolor">CARI LAUNDRY</h4>
+                              </div>
+                              <div class="col-md-7 align-self-center text-right">
+                                  <div class="d-flex justify-content-end align-items-center">
+                                      <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                          <li class="breadcrumb-item active">Cari Laundry</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="content-wrapper">
+                          <div class="form-group">
+                                <label for="email">Nama Laundry</label>
+                                <input type="text" class="form-control" name="email" value="IPB Laundry Club" required="">
+                                                </div>
+            
+            
+                                <label for="name">Upload Foto Laundry</label>
+                                <input type="file" class="form-control" name="name" value="Amin" required="" autofocus="">
+                                                </div>
+            
+            <h3>Waktu Kerja</h3>
+                            <div class="form-group">
+                                <label for="nohp">Buka</label>
+                                <input type="text" class="form-control" name="nohp" value="07:00" required="">
+                                                </div>
+            
+                            <div class="form-group">
+                                <label for="nohp">Tutup</label>
+                                <input type="text" class="form-control" name="tutup" value="12:00" required="">
+                                                </div>
+            
+            <h3>Tawaran Paket</h3>
+            <h4>Paket #1</h4>
+                            <div class="form-group">
+                                <label for="nohp">Nama Paket</label>
+                                <input type="text" class="form-control" name="nohp" value="Gold" required="">
+                                                </div>
+            
+                            <div class="form-group">
+                                <label for="nohp">Biaya Per Kilo</label>
+                                <input type="text" class="form-control" name="tutup" value="Rp10000" required="">
+                                                </div>
+            
+            <div class="form-group">
+                                <label for="nohp">Keterangan</label>
+                                <input type="text" class="form-control" name="tutup" value="1 Hari" required="">
+                                                </div>
+            
+            <h4>Paket #2</h4>
+                            <div class="form-group">
+                                <label for="nohp">Nama Paket</label>
+                                <input type="text" class="form-control" name="nohp" value="Pertalite" required="">
+                                                </div>
+            
+                            <div class="form-group">
+                                <label for="nohp">Biaya Per Kilo</label>
+                                <input type="text" class="form-control" name="tutup" value="Rp7000" required="">
+                                                </div>
+            
+            <div class="form-group">
+                                <label for="nohp">Keterangan</label>
+                                <input type="text" class="form-control" name="tutup" value="2 Hari" required="">
+                                                </div>
+            
+            <h4>Paket #3</h4>
+                            <div class="form-group">
+                                <label for="nohp">Nama Paket</label>
+                                <input type="text" class="form-control" name="nohp" value="Premium" required="">
+                                                </div>
+            
+                            <div class="form-group">
+                                <label for="nohp">Biaya Per Kilo</label>
+                                <input type="text" class="form-control" name="tutup" value="Rp5000" required="">
+                                                </div>
+            
+            <div class="form-group">
+                                <label for="nohp">Keterangan</label>
+                                <input type="text" class="form-control" name="tutup" value="3 Hari" required="">
+                                                </div>
+            
+                                              <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                          </div>
+                         
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <footer class="footer">
+                      Laundry Seeker - Ga susah lagi nyari laundry
+                  </footer>
+                  <!-- ============================================================== -->
+                  <!-- End footer -->
+                  <!-- ============================================================== -->
+              </div>
+              <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/popper/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="../assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="../assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="../assets/node_modules/d3/d3.min.js"></script>
+    <script src="../assets/node_modules/c3-master/c3.min.js"></script>
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+
+				
+
+</body>
+</html>
