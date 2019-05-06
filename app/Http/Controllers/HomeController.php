@@ -25,12 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         $launderers = Launderer::all();
-        return view('home')->with('launderers', $launderers);
+        return view('home')->with('launderers', $launderers)->with('loc', 'ALL AROUND THE WORLD');
     }
 
     public function search($lokasi)
     {
         $launderers = Launderer::like('lokasi', mb_strtoupper($lokasi, 'UTF-8'))->get();
-        return view('home')->with('launderers', $launderers);
+        return view('home')->with('launderers', $launderers)->with('loc', mb_strtoupper($lokasi, 'UTF-8'));
     }
 }
